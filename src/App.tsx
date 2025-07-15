@@ -32,9 +32,24 @@ function App() {
     if (guessedLetters.includes(upperLetter) || status !== "playing") return;
     setGuessedLetters((current) => [...current, upperLetter]);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const key = event.key.toUpperCase();
+      if (/^[A-Z]$/.test(key)) {
+        addGuessedLetter(key);
+      }
+    };
+    if (status === "playing") {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [guessedLetters, status]);
   return (
     <div className="">
-      <h1 className="title">The Hangman Game </h1>
+      <h1 className="title">The Hangman Game</h1>
 
       <HangmanDrawing incorrectCount={incorrectLetters.length} />
       <Word
