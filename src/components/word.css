@@ -1,0 +1,22 @@
+.wordDiv {
+  display: flex;
+
+  justify-content: center;
+  gap: 8px;
+  font-size: 30px;
+  margin-top: 16px;
+}
+.span {
+  border-bottom: 2px solid black;
+  width: 24px;
+  text-align: center;
+  font-size: 38px;
+}
+.text-red {
+  color: #dc2626;
+}
+
+.text-green{
+      color: #39ae3f;
+
+}

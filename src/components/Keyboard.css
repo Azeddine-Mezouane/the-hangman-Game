@@ -1,0 +1,35 @@
+.Keyboard {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 15px;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.letter {
+  all: unset;
+  /* padding: 10px;
+  border: 1px solid #1e385729;
+  border-radius: 10px; */
+  /* transition: background-color 0.2s ease; */
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "DynaPuff", cursive;
+}
+.letter.guessed {
+  /* background-color: #111827;
+  color: white; */
+  cursor: not-allowed;
+  color: #ccd1db;
+}
+.letter:not(.guessed):hover {
+  /* color: #ccd1db; */
+  color: #616e4c;
+  /* background-color: #ccd1db;  */
+}
+
+/* .red {
+  color: #dc262688;
+}
+.green {
+  color: #69dc2699;
+} */
