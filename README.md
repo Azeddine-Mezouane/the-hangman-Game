@@ -1,1 +1,3 @@
-[Try the Game] (the-hangman-game-umber.vercel.app)
+## 🔗 Démo en ligne
+
+👉 [Tester le jeu en ligne](https://the-hangman-game-umber.vercel.app)
